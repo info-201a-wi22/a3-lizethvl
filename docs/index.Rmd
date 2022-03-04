@@ -1,0 +1,55 @@
+---
+title: "Assignment 3: Data Visualization (Incarceration)"
+output: html_document
+---
+
+```{r setup, include=FALSE, warning = FALSE, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r,include=FALSE, warning = FALSE, echo=FALSE, message=FALSE}
+source("../source/analysis.R")
+```
+
+# Inequality's Effects on Incarceration
+#### Lizeth Velderrain-Lopez
+
+### Introduction
+  Through the data collected by Vera Institute concerning incarceration data, visualizations and their corresponding variables can be used to expose the patterns of inequality of incarceration trends and race or ethnicity of those incarcerated. The variables chosen to help conduct this included the total prison population of minority women, the total prison percentage of all minorities, and the percentage of populations of Black women, AAPI women, and Latine women in prison. The level of incarceration chosen is focusing on prison because it is a more severe level.
+
+
+### Summary
+  With the data, the differences between certain ethnicities and races were made as well as comparing the total count of combined ethnicities. For the variables chosen to calculate, it was found that the total prison population of minority women in a county is **1852**. The state with the highest percentage of minority prison admissions is in **TX**. The states with the highest percentages of Black and AAPI prison populations are **NY** and **MN**, respectively. While the county with the highest percentage of Latine prison population from the total Latine population is **Carson County**.
+
+
+  The three data visualizations created observe different ethnicities and comparisons. The first is a graph depicting the percentage of Latine prison populations over time in California and Florida.
+
+```{r pressure, echo=FALSE, warning = FALSE,  message=FALSE}
+plot(latine_prison_pop_plot)
+```
+
+  These two states were chosen because of their high Latine populations. While there was a great difference in distribution between the two, both states showed that there is a steady increase in Latine incarcerations. This chart was included to see how the trends of incarceration have changed over the years - whether they have increased or decreased. However, since they have increased a bit, it is clear that ethnicity is still at play, especially when compared to White incarcerations.
+  
+  The next chart is comparing the percentage of prison populations between Black and AAPI women nationally. 
+  
+```{r echo=FALSE, warning = FALSE,  message=FALSE}
+plot(black_vs_aapi_women_prison_pop)
+```
+  
+  This shows a stark difference between the rate in which Black women and AAPI women are incarcerated, which may stem from unjust prejudices of both groups, such as the "aggressiveness" of Black women, and the "model minority" myth. Especially because the highest percentage for Black women is 100% and for AAPI women, it's a little over 12%. The chart was included to see how different races and ethnicities are treated by law enforcement, knowing the existing prejudice that continue to remain in society.
+  
+  The final visualization is a choropleth map of the United States, showing a heatmap of the percentages of combined minorites in prison in each county.
+  
+```{r echo=FALSE, warning = FALSE,  message=FALSE}
+plot(map_plot)
+```
+
+  Because of the messy data from the dataset, many counties are shown as grey because of the data that was not available. This visualization was included because it is important to see how the incarcerations of minorities are compared to White people, as well as, how much they differ from one another. From the map, a clear trend is that more populated areas house more incarcerated minorities, due to the higher populations of these minorities as well. Also, many of these counties and surrounding areas have higher percentages.
+
+  
+  
+  
+  
+  
+
